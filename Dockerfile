@@ -2,7 +2,7 @@ FROM centos:centos6
 MAINTAINER Motonori Iwata <gootonori+docker@gmail.com>
 
 ENV MYVER 5.6.19
-ENV Q4MVER 0.9.13
+ENV Q4MVER 0.9.14
 ENV HSVER 1.1.1
 ENV MYSQLDIR /usr/local/mysql
 ENV TZ Asia/Tokyo
