@@ -26,13 +26,13 @@ RUN yum install -y gcc gcc-c++ ncurses-devel cmake libedit-devel \
                    libaio-devel perl libedit libtool which && \
     yum -y clean all
 
-ADD ./install-mysql.sh /install-mysql.sh
+COPY ./install-mysql.sh /install-mysql.sh
 RUN chmod +x /*.sh
 
 RUN /install-mysql.sh
 ENV PATH $MYSQLDIR/bin:$PATH
 
-ADD ./my.cnf /etc/my.cnf
+COPY ./my.cnf /etc/my.cnf
 
 ENV LANG en_US.UTF-8
 EXPOSE 3306
